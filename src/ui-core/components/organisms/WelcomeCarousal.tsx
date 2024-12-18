@@ -11,24 +11,12 @@ import {
 } from "@/components/ui/carousel";
 import React from "react";
 import Image from "next/image";
-import img01 from "/public/funiture/img-01.png";
-import img02 from "/public/funiture/img-02.png";
-import img03 from "/public/funiture/img-03.png";
-import img04 from "/public/funiture/img-04.png";
-import img05 from "/public/funiture/img-05.png";
-import img06 from "/public/funiture/img-06.png";
-import img07 from "/public/funiture/img-07.png";
-import img08 from "/public/funiture/img-08.png";
+import img01 from "/public/banner-01.jpg";
+import img02 from "/public/banner-02.jpg";
 
 const imagesArray: any = [
     {image: img01},
     {image: img02},
-    {image: img03},
-    {image: img04},
-    {image: img05},
-    {image: img06},
-    {image: img07},
-    {image: img08}
 ];
 
 function WelcomeCarousal() {
@@ -43,7 +31,7 @@ function WelcomeCarousal() {
       opts={{
         loop: true,
       }}
-      className="w-full max-w-[500px]"
+      className="w-full max-w-[95%]"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
@@ -52,12 +40,7 @@ function WelcomeCarousal() {
             return(
                 <CarouselItem key={index}>
                 <div className="p-1">
-                  <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                      {/* <span className="text-4xl font-semibold">{index + 1}</span> */}
-                      <Image className="w-[400px] h-[400px]" src={item.image} alt={`img-${index+1}`} />
-                    </CardContent>
-                  </Card>
+                <Image className="w-full h-[400px]" src={item.image} alt={`img-${index+1}`} />
                 </div>
               </CarouselItem>  
             )
